@@ -6,7 +6,7 @@ const connectDatabase = require("./database/db");
 
 const app = express()
 
-connectDatabase()
+connectDatabase();
 
 
 app.listen(process.env.PORT, ()=>{

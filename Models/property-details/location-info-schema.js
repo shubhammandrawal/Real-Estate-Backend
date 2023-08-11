@@ -8,6 +8,7 @@ const LocationInfoSchema = new mongoose.Schema({
 
     area:{
         type: String,
+        required: true
     },
 
     address: {

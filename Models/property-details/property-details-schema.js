@@ -22,7 +22,8 @@ const PropertyDetailsSchema = new mongoose.Schema({
     },
 
     BHK: {
-        type: Number
+        type: Number,
+        required: true
     },
 
     floor: {

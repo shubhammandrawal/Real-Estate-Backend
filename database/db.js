@@ -2,8 +2,7 @@ const mongoose = require("mongoose")
 const dotenv = require("dotenv").config();
 
 const connectDatabase = () => {
-    mongoose.connect(process.env.MONGO_URL,
-        { family: 4 })
+    mongoose.connect(process.env.MONGO_URL, { family: 4 })
         .then(() => {
             console.log("Succesfully connected to database")
         }).catch(() => {
@@ -11,5 +10,5 @@ const connectDatabase = () => {
         })
 }
 
-module.exports = connectDatabase;
+module.exports = connectDatabase
 

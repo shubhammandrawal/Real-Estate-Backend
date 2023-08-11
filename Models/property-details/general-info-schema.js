@@ -21,7 +21,8 @@ const GeneralInfoSchema = new mongoose.Schema({
     },
 
     sale:{
-        type: String
+        type: String,
+        required: true
     },
 
     ppd: {

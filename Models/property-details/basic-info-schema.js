@@ -18,7 +18,8 @@ const BasicInfoSchema = new mongoose.Schema({
     },
 
     propertyDescription: {
-        type: String
+        type: String,
+        required: true
     },
 
     Negotable: {
