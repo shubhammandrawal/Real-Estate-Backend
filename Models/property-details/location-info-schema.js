@@ -3,12 +3,12 @@ const mongoose = require("mongoose");
 const LocationInfoSchema = new mongoose.Schema({
     email:{
         type: String,
-        required: true
+        // required: true
     },
 
     area:{
         type: String,
-        required: true
+        // required: true
     },
 
     address: {
