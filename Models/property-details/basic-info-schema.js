@@ -4,22 +4,22 @@ const BasicInfoSchema = new mongoose.Schema({
     propertytype: {
         type: String,
         enum: ["house", "flat", "farmHouse", "penthouse"],
-        required: true
+        // required: true
     },
 
     price: {
         type: Number,
-        required: true
+        // required: true
     },
 
     propertyAge: {
         type: Number,
-        required: true
+        // required: true
     },
 
     propertyDescription: {
         type: String,
-        required: true
+        // required: true
     },
 
     Negotable: {
