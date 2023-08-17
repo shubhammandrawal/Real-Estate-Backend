@@ -1,23 +1,15 @@
-const express = require("express");
-const dotenv = require("dotenv").config();
-const cors = require("cors");
-const connectDatabase = require("./database/db");
+// server starting folder
+const app = require('./app');
+const mongoose = require('mongoose');
+const dotenv = require('dotenv')
+dotenv.config({path:'./.env'})
+const port = process.env.port || 5000
+mongoose.connect(process.env.MONGOURI, {family: 4}).then(()=>{
+    console.log("mongodb connected successfully ");
+}).catch(()=>{
+    console.log("Failed to connect to database of mongodb");
+});
 
-const app = express()
 
-connectDatabase();
-app.use(express.json())
 
-const basicInfo = require("./Routes/Addproperty")
-const propertDetails = require("./Routes/Addproperty")
-const generalInfo = require("./Routes/Addproperty")
-const locationInfo = require("./Routes/Addproperty")
-
-app.use("/api/v1", basicInfo)
-app.use("/api/v1", propertDetails)
-app.use("/api/v1", generalInfo)
-app.use("/api/v1", locationInfo)
-
-app.listen(process.env.PORT, ()=>{
-    console.log(`Server is running on ${process.env.PORT}`)
-})
+app.listen(port, () => console.log(`App listening on port ${port}!`));
